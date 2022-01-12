@@ -1,0 +1,10 @@
+alias ssh-hack="ssh ainsley@188.172.154.182 -p 1022"
+alias serve-php="php -S localhost:8000"
+alias web="cd /Users/ainsley/desktop/web"
+alias reddico='cd /Users/ainsley/desktop/reddico'
+alias c='clear'
+alias coverage="go test -coverprofile /tmp/c.out && uncover /tmp/c.out"
+alias hosts="nano /etc/hosts"
+alias efi="/Users/ainsley/Documents/Tools/MountEFI/MountEFI.command"
+alias propertree="/Users/ainsley/Documents/Tools/ProperTree/ProperTree.command"
+alias usbmap="/Users/ainsley/Documents/Tools/USBMap/USBMap.command"
