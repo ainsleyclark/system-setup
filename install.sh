@@ -74,6 +74,8 @@ brew install --cask plex
 brew install --cask transmission
 brew install --cask carbon-copy-cloner
 brew install --cask amd-power-gadget
+brew install --cask geekbench
+brew install --cask handbrake
 
 # Image / Video Optim
 brew install webp
