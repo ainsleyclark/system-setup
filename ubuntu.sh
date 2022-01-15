@@ -33,12 +33,12 @@ apt-get install curl -y
 
 # Updates
 echo "Installing snap"
-apt install snapd
+apt install snapd -y
 
 # Git
 echo 'Installing latest git'
 add-apt-repository ppa:git-core/ppa -y
-apt-get update && apt-get install git -y
+apt-get -y update && apt-get install git -y
 
 echo "Setting up your git global user name and email"
 git config --global user.name "$git_config_user_name"
@@ -55,7 +55,7 @@ apt install ./google-chrome-stable_current_amd64.deb
 apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add -
 add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-apt install microsoft-edge-dev
+apt-get -y update && apt install microsoft-edge-dev
 
 # Go
 echo "Installing GoLang"
@@ -63,14 +63,13 @@ snap install go --classic
 
 # Node/NPM
 echo "Installing node"
-apt install nodejs
+apt-get -y update && apt install nodejs -y
 
 # PHP
 echo "Installing php 7.4"
 apt -y install software-properties-common
 add-apt-repository ppa:ondrej/php
-apt-get update
-apt -y install php7.4
+apt-get -y update && apt -y install php7.4
 
 # Python
 echo "Installing python"
@@ -83,7 +82,7 @@ apt-get install mysql-client -y
 
 # Nginx
 echo "Installing Nginx"
-apt install nginx -y
+apt-get -y update && apt install nginx -y
 
 # IDEs
 echo "Installing IDEs"
@@ -96,7 +95,7 @@ snap install webstorm --classic
 # Dev tools
 echo "Installing dev tools"
 snap install goreleaser --classic
-apt-get install hugo -y
+apt-get -y update && apt-get install hugo -y
 snap install postman
 
 # Productivity
@@ -109,7 +108,7 @@ snap install spotify
 snap install vlc
 
 echo 'Installing ZSH'
-apt-get install zsh -y
+apt-get -y update && apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s $(which zsh)
 
