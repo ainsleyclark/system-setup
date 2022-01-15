@@ -1,9 +1,27 @@
 #!/bin/bash
+#
+# macOS Setup
+#
+# Ainsley Clark, ainsley.dev - 15/01/2022
+
 
 echo "************************************************"
 echo "***    Welcome to the macOS System Setup     ***"
 echo "************************************************"
 echo ""
+
+# Check if root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# Variables
+echo "What name do you want to use in git user.name?"
+read git_config_user_name
+
+echo "What email do you want to use in git user.email?"
+read git_config_user_email
 
 # Install brew
 if ! hash brew
@@ -21,7 +39,15 @@ brew install wget
 
 # Git
 echo "Installing git"
-brew install git  
+brew install git
+
+echo "Setting up your git global user name and email"
+git config --global user.name "$git_config_user_name"
+git config --global user.email $git_config_user_email
+
+echo "Copying global .gitignore file"
+sudo cp ./git/.gitignore ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
 
 # Browser
 echo "Installing browsers"
