@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "************************************************"
+echo "***    Welcome to the macOS System Setup     ***"
+echo "************************************************"
+echo ""
+
 # Install brew
 if ! hash brew
 then
@@ -10,67 +15,82 @@ else
 fi
 
 # Curl / Wget
+echo "Installing curl & wget"
 brew install curl
 brew install wget
 
 # Git
+echo "Installing git"
 brew install git  
 
 # Browser
+echo "Installing browsers"
 brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask microsoft-edge
 
 # Terminal replacement https://www.iterm2.com
+echo "Installing iterm2"
 brew install --cask iterm2
 
 # Communication
+echo "Installing communication apps"
 brew install --cask slack
 brew install --cask whatsapp
 brew install --cask workplace-chat
 brew install --cask zoom
 
 # Go
+echo "Installing GoLang"
 brew install go
 
 # Node/NPM
+echo "Installing node"
 brew install node
 
-# PHP 
+# PHP
+echo "Installing php 7.4"
 brew install php@7.4
 
 # Python
+echo "Installing python"
 brew install python
 
 # MySQL
+echo "Installing NySQL and MySQL client"
 brew install mysql
 brew install mysql-client
 
-# Dev tools         
-brew install bash
-brew install zsh
-brew install kubectl 
-brew install goreleaser
-brew install hugo
-brew install --cask postman
-
-# IDE's
+# IDEs
+echo "Installing IDEs"
 brew install --cask visual-studio-code
 brew install --cask goland
 brew install --cask phpstorm
 brew install --cask datagrip
 brew install --cask webstorm
 
+# Dev tools
+echo "Installing dev tools"
+brew install bash
+brew install zsh
+brew install kubectl
+brew install goreleaser
+brew install hugo
+brew install --cask postman
+
 # Productivity
+echo "Installing productivity apps"
 brew install --cask simplenote
 brew install --cask adobe-creative-cloud
 
 # Music / Video
+echo "Installing music and video apps"
 brew install --cask spotify
 brew install --cask vlc
 brew install --cask plex
 
 # Misc
+echo "Installing misc"
 brew install --cask transmission
 brew install --cask carbon-copy-cloner
 brew install --cask amd-power-gadget
@@ -78,6 +98,7 @@ brew install --cask geekbench
 brew install --cask handbrake
 
 # Image / Video Optim
+echo "Installing image and video optimisation CLI's"
 brew install webp
 brew install optipng
 brew install jpegoptim
@@ -85,6 +106,7 @@ brew install libavif
 brew install ffmpeg
 
 # Oh My ZSH (Last)
+echo "Installing Oh My ZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Inject Env's
