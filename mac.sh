@@ -4,12 +4,16 @@
 #
 # Ainsley Clark, ainsley.dev - 15/01/2022
 
+# Variables
+PHP_VERSION="7.4"
+GOLANG_VERSION="1.17.5"
+
 echo "************************************************"
 echo "***    Welcome to the macOS System Setup     ***"
 echo "************************************************"
 echo ""
 
-# Variables
+# Git Variables
 echo "What name do you want to use in git user.name?"
 read git_config_user_name
 
@@ -55,8 +59,8 @@ echo "Installing iterm2"
 brew install --cask iterm2
 
 # Go
-echo "Installing GoLang"
-brew install go
+echo "Installing GoLang $GOLANG_VERSION"
+brew install go@$GOLANG_VERSION
 
 # Node/NPM/Typescript
 echo "Installing node"
@@ -64,8 +68,8 @@ brew install node
 sudo npm install -g typescript
 
 # PHP
-echo "Installing php 7.4"
-brew install php@7.4
+echo "Installing PHP $PHP_VERSION"
+brew install php@$PHP_VERSION
 
 # Python
 echo "Installing python"
@@ -120,7 +124,7 @@ brew install --cask geekbench
 brew install --cask handbrake
 brew install neofetch
 
-# Image / Video Optim
+# Image / Video Optimisation
 echo "Installing image and video optimisation CLI's"
 brew install webp
 brew install optipng
@@ -132,9 +136,9 @@ brew install ffmpeg
 echo "Installing Oh My ZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Inject Env's
-echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
+# Inject Envs
+echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/sbin:$PATH"' >> ~/.zshrc
 zsh
 
 echo ""
