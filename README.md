@@ -1,5 +1,6 @@
 # Dev Workstation Setup
 
-Thi
-Setup scripts for macOS
+These scripts are designed to set up a dev workstation on macOS and Ubuntu.
+
+
 

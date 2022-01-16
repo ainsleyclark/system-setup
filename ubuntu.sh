@@ -104,10 +104,12 @@ curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install
 # Dev tools
 echo "Installing dev tools"
 
+# Hugo
+apt-get -y update && apt-get install -y hugo
+
 # GoReleaser
-apt-get -y update && apt-get install hugo -y
 echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | sudo tee /etc/apt/sources.list.d/goreleaser.list
-apt update && apt install goreleaser
+apt update && apt install -y goreleaser
 
 # Kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -124,7 +126,7 @@ snap install vlc
 
 # ZSH
 echo 'Installing ZSH'
-apt install zsh
+apt install -y zsh
 
 # Image / Video Optimisation
 echo "Installing image and video optimisation CLI's"
@@ -133,13 +135,14 @@ apt-get install -y optipng
 apt-get install -y jpegoptim
 apt-get install -y ffmpeg
 
-# Oh My ZSH (Last)
-echo "Installing Oh My ZSH"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Inject Envs
 echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/sbin:$PATH"' >> ~/.zshrc
+echo 'export PATH="$PATH:/usr/local/go/bin"' >> ~/.zshrc
+
+# Oh My ZSH (Last)
+echo "Installing Oh My ZSH"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 zsh
 
 echo ""

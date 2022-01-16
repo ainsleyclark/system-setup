@@ -132,13 +132,13 @@ brew install jpegoptim
 brew install libavif
 brew install ffmpeg
 
-# Oh My ZSH (Last)
-echo "Installing Oh My ZSH"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Inject Envs
 echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/usr/local/opt/php@$PHP_VERSION/sbin:$PATH"' >> ~/.zshrc
+
+# Oh My ZSH (Last)
+echo "Installing Oh My ZSH"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 zsh
 
 echo ""
