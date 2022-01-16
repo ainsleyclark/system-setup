@@ -28,7 +28,7 @@ apt-get -y update
 apt-get -y upgrade
 
 # Curl / Wget
-echo "Installing curl & wget"
+echo "Installing curl"
 apt-get install curl -y
 
 # Git
@@ -44,18 +44,21 @@ echo "Copying global .gitignore file"
 cp ./git/.gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 
-# Browser
-echo "Installing browsers"
+# Chrome
+echo "Installing Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install ./google-chrome-stable_current_amd64.deb
-apt install software-properties-common apt-transport-https wget
+
+# Edge
+echo "Installing Edge"
+apt install software-properties-common apt-transport-https
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add -
 add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
 apt-get -y update && apt install microsoft-edge-dev
 
 # Go
 echo "Installing GoLang"
-snap install go --classic
+apt install golang
 
 # Node/NPM
 echo "Installing node"
@@ -80,37 +83,48 @@ apt-get install mysql-client -y
 echo "Installing Nginx"
 apt-get -y update && apt install nginx -y
 
-# IDEs
-echo "Installing IDEs"
-snap install code --classic
-snap install goland --classic
-snap install phpstorm --classic
-snap install datagrip --classic
-snap install webstorm --classic
+# VS Code
+echo "Installing VS Code"
+apt install software-properties-common apt-transport-https
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+# Jetbrains
+echo "Installing Jetbrains Toolbox"
+curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
 
 # Dev tools
 echo "Installing dev tools"
-snap install goreleaser --classic
+
+# GoReleaser
 apt-get -y update && apt-get install hugo -y
-snap install postman
+echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | sudo tee /etc/apt/sources.list.d/goreleaser.list
+apt update && apt install goreleaser
+
+# Kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 # Productivity
 echo "Installing productivity apps"
-snap install simplenote
+# TODO Simplenote
 
-# Music / Video
-echo "Installing music and video apps"
-snap install spotify
-snap install vlc
+# Spotify
+echo "Installing Spotify"
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client -y
 
+# VLC
+echo "Installing VLC"
+sudo apt-get install vlc -y
+sudo apt-get install vlc-plugin-access-extra libbluray-bdj libdvdcss2 -y
+
+# ZSH
 echo 'Installing ZSH'
 apt-get -y update && apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s $(which zsh)
-
-# Communication
-echo "Installing communication apps"
-snap install slack --classic
 
 # Image / Video Optim
 echo "Installing image and video optimisation CLI's"

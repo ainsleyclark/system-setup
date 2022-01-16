@@ -1,2 +1,2 @@
-# macos-setup
+# System Install
 Setup scripts for macOS

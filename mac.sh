@@ -54,20 +54,14 @@ brew install --cask microsoft-edge
 echo "Installing iterm2"
 brew install --cask iterm2
 
-# Communication
-echo "Installing communication apps"
-brew install --cask slack
-brew install --cask whatsapp
-brew install --cask workplace-chat
-brew install --cask zoom
-
 # Go
 echo "Installing GoLang"
 brew install go
 
-# Node/NPM
+# Node/NPM/Typescript
 echo "Installing node"
 brew install node
+sudo npm install -g typescript
 
 # PHP
 echo "Installing php 7.4"
@@ -89,6 +83,13 @@ brew install --cask goland
 brew install --cask phpstorm
 brew install --cask datagrip
 brew install --cask webstorm
+
+# Communication
+echo "Installing communication apps"
+brew install --cask slack
+brew install --cask whatsapp
+brew install --cask workplace-chat
+brew install --cask zoom
 
 # Dev tools
 echo "Installing dev tools"
@@ -135,3 +136,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
 zsh
+
+echo ""
+echo "************************************************"
+echo "***    Finished, now run ./post-install      ***"
+echo "************************************************"

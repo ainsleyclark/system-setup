@@ -7,22 +7,22 @@ on:
 
 jobs:
   # macOS
-  mac:
-    runs-on: macos-11
-    steps:
-      # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
-      - name: Checkout
-        uses: actions/checkout@v2
-        # Step 2 - Runs the macOS setup script
-      - name: Test install
-        run: sh mac.sh
-  # Ubuntu
-#  ubuntu:
-#    runs-on: ubuntu-latest
+#  macOS:
+#    runs-on: macos-11
 #    steps:
 #      # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
 #      - name: Checkout
 #        uses: actions/checkout@v2
-#      # Step 2 - Runs the Ubuntu setup script
+#        # Step 2 - Runs the macOS setup script
 #      - name: Test install
-#        run: sudo sh mac.sh
+#        run: sh mac.sh
+  # Ubuntu
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Step 2 - Runs the Ubuntu setup script
+      - name: Test install
+        run: sudo sh mac.sh
