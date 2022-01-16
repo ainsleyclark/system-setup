@@ -31,10 +31,6 @@ apt-get -y upgrade
 echo "Installing curl & wget"
 apt-get install curl -y
 
-# Updates
-echo "Installing snap"
-apt install snapd -y
-
 # Git
 echo 'Installing latest git'
 add-apt-repository ppa:git-core/ppa -y

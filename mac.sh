@@ -16,14 +16,16 @@ read git_config_user_name
 echo "What email do you want to use in git user.email?"
 read git_config_user_email
 
-# Install brew
+# Install brew if not already
 if ! hash brew
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew update
 else
-  printf "\e[93m%s\e[m\n" "You already have brew installed."
+  printf "\e[93m%s\e[m\n" "You already have brew installed, updating"
 fi
+
+# Update brew
+brew update
 
 # Curl / Wget
 echo "Installing curl & wget"
@@ -133,7 +135,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
 zsh
-
-# Post Install
-brew services start mysql
-mysql_secure_installation
