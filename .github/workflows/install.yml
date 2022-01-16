@@ -25,4 +25,4 @@ jobs:
         uses: actions/checkout@v2
       # Step 2 - Runs the Ubuntu setup script
       - name: Test install
-        run: sudo sh mac.sh
+        run: sudo sh ubuntu.sh
