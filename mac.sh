@@ -6,7 +6,7 @@
 
 # Variables
 PHP_VERSION="7.4"
-GOLANG_VERSION="1.17.5"
+GOLANG_VERSION="1.17"
 
 echo "************************************************"
 echo "***    Welcome to the macOS System Setup     ***"
