@@ -4,7 +4,6 @@
 #
 # Ainsley Clark, ainsley.dev - 15/01/2022
 
-
 echo "************************************************"
 echo "***    Welcome to the macOS System Setup     ***"
 echo "************************************************"
@@ -122,6 +121,7 @@ brew install --cask carbon-copy-cloner
 brew install --cask amd-power-gadget
 brew install --cask geekbench
 brew install --cask handbrake
+brew install neofetch
 
 # Image / Video Optim
 echo "Installing image and video optimisation CLI's"
