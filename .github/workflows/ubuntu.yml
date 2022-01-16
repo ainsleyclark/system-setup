@@ -7,13 +7,3 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-
-      # Step 1 - Checks-out your repository under $GITHUB_WORKSPACE
-      - name: Checkout
-      uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Test install
-      run: sh ubuntu.sh
