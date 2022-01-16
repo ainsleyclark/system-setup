@@ -59,7 +59,7 @@ apt-get -y update && apt install -y microsoft-edge-dev
 # Go
 echo "Installing GoLang"
 wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz
-tar -C /usr/local -xvzf go1.16.7.linux-amd64.tar.gz
+tar -C /usr/local -xvzf go1.17.5.linux-amd64.tar.gz
 
 # Node/NPM
 echo "Installing node"
