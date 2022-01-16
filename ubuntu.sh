@@ -29,7 +29,7 @@ apt-get -y upgrade
 
 # Curl / Wget
 echo "Installing curl"
-apt-get install curl -y
+apt-get install -y curl
 
 # Git
 echo 'Installing latest git'
@@ -51,14 +51,15 @@ apt install ./google-chrome-stable_current_amd64.deb
 
 # Edge
 echo "Installing Edge"
-apt install software-properties-common apt-transport-https
+apt install -y software-properties-common apt-transport-https
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add -
 add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-apt-get -y update && apt install microsoft-edge-dev
+apt-get -y update && apt install -y microsoft-edge-dev
 
 # Go
 echo "Installing GoLang"
-apt install golang
+wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz
+tar -C /usr/local -xvzf go1.16.7.linux-amd64.tar.gz
 
 # Node/NPM
 echo "Installing node"
@@ -122,9 +123,7 @@ sudo apt-get install vlc-plugin-access-extra libbluray-bdj libdvdcss2 -y
 
 # ZSH
 echo 'Installing ZSH'
-apt-get -y update && apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s $(which zsh)
+apt install zsh
 
 # Image / Video Optim
 echo "Installing image and video optimisation CLI's"
