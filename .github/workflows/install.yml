@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
         # Step 2 - Runs the macOS setup script
       - name: Test install
-        run: sudo sh mac.sh
+        run: sh mac.sh
   # Ubuntu
 #  ubuntu:
 #    runs-on: ubuntu-latest

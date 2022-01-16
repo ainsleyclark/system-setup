@@ -9,12 +9,6 @@ echo "***    Welcome to the macOS System Setup     ***"
 echo "************************************************"
 echo ""
 
-# Check if root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
 # Variables
 echo "What name do you want to use in git user.name?"
 read git_config_user_name
