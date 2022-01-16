@@ -7,6 +7,21 @@ These scripts are designed to set up a dev workstation on macOS and Ubuntu. Thes
 IDEs, productivity and communication applications as well as developer tools. You can see a list of what it installs
 below.
 
+## How to use
+Simply download this repo or clone it and run the following:
+
+**macOS:**
+```bash
+sudo chmod +x ./mac.sh
+sh mac.sh
+```
+
+**Ubuntu:**
+```bash
+sudo chmod +x ./ubuntu.sh
+sudo sh ubuntu.sh
+```
+
 ## Git
 Git will be configured and a username and email address will be read at the beginning of the script and set globally.
 The  `.gitignore` file that resides under `./git` will be copied and used globally to exclude any large library files from
