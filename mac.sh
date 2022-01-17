@@ -102,6 +102,7 @@ brew install zsh
 brew install kubectl
 brew install goreleaser
 brew install hugo
+brew install golangci-lint
 brew install --cask postman
 
 # Productivity
