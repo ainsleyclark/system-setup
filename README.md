@@ -7,6 +7,10 @@ These scripts are designed to set up a dev workstation on macOS and Ubuntu. Thes
 IDEs, productivity and communication applications as well as developer tools. You can see a list of what it installs
 below.
 
+## Important Note:
+I understand these applications may not be for everyone, so please feel free to fork and edit as much as you want, it's
+merley a boilerplate to go off!
+
 ## How to use
 Simply download this repo or clone it and run the following:
 
