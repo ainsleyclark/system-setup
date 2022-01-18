@@ -104,6 +104,7 @@ brew install goreleaser
 brew install hugo
 brew install golangci-lint
 brew install --cask postman
+brew install mockery
 
 # Productivity
 echo "Installing productivity apps"
