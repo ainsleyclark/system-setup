@@ -26,6 +26,12 @@ read git_config_user_name
 echo "What email do you want to use in git user.email?"
 read git_config_user_email
 
+# Copy dot files
+echo "Copying config files"
+cp ./editorconfig ~/.editorconfig
+cp ./.gitignore ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+
 # Updates
 echo "Running updates"
 apt-get -y update
@@ -44,9 +50,6 @@ echo "Setting up your git global user name and email"
 git config --global user.name "$git_config_user_name"
 git config --global user.email $git_config_user_email
 
-echo "Copying global .gitignore file"
-cp ./git/.gitignore ~/.gitignore
-git config --global core.excludesfile ~/.gitignore
 
 # Chrome
 echo "Installing Chrome"

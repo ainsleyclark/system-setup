@@ -20,6 +20,9 @@ read git_config_user_name
 echo "What email do you want to use in git user.email?"
 read git_config_user_email
 
+# Copy dot files
+cp ./editorconfig ~/.editorconfig
+
 # Install brew if not already
 if ! hash brew
 then
