@@ -6,7 +6,7 @@
 
 # Variables
 PHP_VERSION="7.4"
-GOLANG_VERSION="1.17"
+GOLANG_VERSION="1.19"
 
 echo "************************************************"
 echo "***    Welcome to the macOS System Setup     ***"
@@ -64,7 +64,6 @@ brew install --cask iterm2
 # Go
 echo "Installing GoLang $GOLANG_VERSION"
 brew install go@$GOLANG_VERSION
-
 # Node/NPM/Typescript
 echo "Installing node"
 brew install node
@@ -95,7 +94,6 @@ brew install --cask webstorm
 echo "Installing communication apps"
 brew install --cask slack
 brew install --cask whatsapp
-brew install --cask workplace-chat
 brew install --cask zoom
 
 # Dev tools
@@ -124,9 +122,9 @@ brew install --cask plex
 echo "Installing misc"
 brew install --cask transmission
 brew install --cask carbon-copy-cloner
-brew install --cask amd-power-gadget
 brew install --cask geekbench
 brew install --cask handbrake
+brew install shpotify
 brew install neofetch
 
 # Image / Video Optimisation

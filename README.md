@@ -62,7 +62,6 @@ You are able to set the specific versions of GoLang and PHP at the very top of t
 - WebStorm
 - Slack
 - WhatsApp
-- Workplace Chat
 - Zoom
 - Bash 5
 - Zsh
@@ -78,7 +77,6 @@ You are able to set the specific versions of GoLang and PHP at the very top of t
 - Plex
 - Transmission
 - Carbon Copy Cloner
-- AMD Power Gadget
 - Geekbench
 - Handbrake
 - Neofetch
@@ -87,6 +85,7 @@ You are able to set the specific versions of GoLang and PHP at the very top of t
 - JpegOptim
 - libavif
 - ffmpeg
+- Shpotify
 
 ### Ubuntu
 
